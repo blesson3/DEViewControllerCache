@@ -51,14 +51,14 @@
 @interface DEViewControllerCache () <NSCacheDelegate>
 
 @property (readonly, strong, nonatomic) OSCache *cache;
+@property (readonly, strong, nonatomic) NSDictionary *storyboardReferences;
 
 @end
 
 
 @implementation DEViewControllerCache
 
-@synthesize cache = _cache;
-
+@synthesize cache = _cache, storyboardReferences = _storyboardReferences;
 
 #pragma mark - Initializer
 
@@ -98,7 +98,7 @@
     return instances;
 }
 
--(id)controllerForClass:(Class)controllerClass {
+-(id)controllerForClass:(Class)controllerClass storyboardName:(NSString*)storyboardName storyboardIdentifier:(NSString*)storyboardIdentifier {
     NSMutableSet *instances = [self instancesForControllerClass:controllerClass];
 
     UIViewController *controller = nil;
@@ -114,10 +114,39 @@
     }
 
     if (!controller) {
-        controller = [controllerClass controller];
+        if (storyboardName != nil && storyboardIdentifier != nil) {
+            controller = [UIViewController controllerWithStoryboardName:storyboardName storyboardIdentifer:storyboardIdentifier];
+        }
+        else {
+            controller = [controllerClass controller];
+        }
+        
         [instances addObject:controller];
     }
 
+    return controller;
+}
+
+-(id)controllerForClass:(Class)controllerClass {
+    NSMutableSet *instances = [self instancesForControllerClass:controllerClass];
+    
+    UIViewController *controller = nil;
+    
+    for (UIViewController *instance in instances) {
+        if (![self isControllerInUse:instance]) {
+            controller = instance;
+            if ([controller respondsToSelector:@selector(willBeReused)]) {
+                [controller willBeReused];
+            }
+            break;
+        }
+    }
+    
+    if (!controller) {
+        controller = [controllerClass controller];
+        [instances addObject:controller];
+    }
+    
     return controller;
 }
 

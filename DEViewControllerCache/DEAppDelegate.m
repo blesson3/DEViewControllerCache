@@ -42,8 +42,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    DEFirstController *firstController =
-    [[DEViewControllerCache defaultCache] controllerForClass:[DEFirstController class]];
+//    DEFirstController *firstController = [[DEViewControllerCache defaultCache] controllerForClass:[DEFirstController class]];
+    DEFirstController *firstController = [[DEViewControllerCache defaultCache] controllerForClass:[DEFirstController class] storyboardName:@"Main" storyboardIdentifier:@"first"];
     NSLog(@"%@", firstController);
     
     self.navController = [[UINavigationController alloc] initWithRootViewController:firstController];

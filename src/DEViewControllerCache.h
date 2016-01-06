@@ -82,6 +82,7 @@
  
  */
 -(id)controllerForClass:(Class)controllerClass;
+-(id)controllerForClass:(Class)controllerClass storyboardName:(NSString*)storyboardName storyboardIdentifier:(NSString*)storyboardIdentifier; // changed
 
 
 #pragma mark - Cache Reduction

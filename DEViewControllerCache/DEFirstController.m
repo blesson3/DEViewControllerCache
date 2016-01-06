@@ -38,7 +38,8 @@
 }
 
 -(IBAction)controller2Tapped:(id)sender {
-    DESecondController *controller = [[DEViewControllerCache defaultCache] controllerForClass:[DESecondController class]];
+//    DESecondController *controller = [[DEViewControllerCache defaultCache] controllerForClass:[DESecondController class]];
+    DESecondController *controller = [[DEViewControllerCache defaultCache] controllerForClass:[DESecondController class] storyboardName:@"Main" storyboardIdentifier:@"second"];
     
     NSLog(@"%@", controller);
     

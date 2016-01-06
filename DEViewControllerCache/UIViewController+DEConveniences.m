@@ -30,6 +30,21 @@
 
 #pragma mark - Convenience Constructors
 
++(instancetype) controllerWithStoryboardName:(NSString*)storyboardName storyboardIdentifer:(NSString*)storyboardIdentifer {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
+    UIViewController *controller = nil;
+    if (storyboard) {
+        controller = [storyboard instantiateViewControllerWithIdentifier:storyboardIdentifer];
+        if (!controller) {
+            controller = [[self alloc] init];
+        }
+    }
+    else {
+        controller = [[self alloc] init];
+    }
+    return controller;
+}
+
 +(instancetype) controller {
     return [self controllerWithNibName: NSStringFromClass([self class])
                              nibBundle: nil];

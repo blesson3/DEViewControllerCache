@@ -20,12 +20,13 @@
 		3F97566518E087530046C09B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F97566318E087530046C09B /* InfoPlist.strings */; };
 		3F97566718E087530046C09B /* DEViewControllerCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F97566618E087530046C09B /* DEViewControllerCacheTests.m */; };
 		3F97567A18E0BBB10046C09B /* DEFirstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F97567918E0BBB10046C09B /* DEFirstController.m */; };
-		3F97567C18E0BBC20046C09B /* DEFirstController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F97567B18E0BBC20046C09B /* DEFirstController.xib */; };
 		3F97568018E0CE160046C09B /* DESecondController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F97567F18E0CE160046C09B /* DESecondController.m */; };
-		3F97568318E0CE4E0046C09B /* DESecondController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F97568218E0CE4E0046C09B /* DESecondController.xib */; };
 		3F97568918E0F53D0046C09B /* DEViewControllerCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F97568818E0F53D0046C09B /* DEViewControllerCache.m */; };
 		3FB6B8DA18E5EBA600F37C92 /* UIViewController+DEConveniences.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6B8D918E5EBA600F37C92 /* UIViewController+DEConveniences.m */; };
 		3FFA499019096B7D00EBF617 /* OSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA498F19096B7D00EBF617 /* OSCache.m */; };
+		D9DA0A471C3CC8AB00191DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9DA0A461C3CC8AB00191DD3 /* Main.storyboard */; };
+		D9DA0A481C3CCB7B00191DD3 /* DEFirstController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F97567B18E0BBC20046C09B /* DEFirstController.xib */; };
+		D9DA0A491C3CCB7B00191DD3 /* DESecondController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F97568218E0CE4E0046C09B /* DESecondController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		3FB6B8D918E5EBA600F37C92 /* UIViewController+DEConveniences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DEConveniences.m"; sourceTree = "<group>"; };
 		3FFA498E19096B7D00EBF617 /* OSCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCache.h; sourceTree = "<group>"; };
 		3FFA498F19096B7D00EBF617 /* OSCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCache.m; sourceTree = "<group>"; };
+		D9DA0A461C3CC8AB00191DD3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			children = (
 				3F97565018E087530046C09B /* DEAppDelegate.h */,
 				3F97565118E087530046C09B /* DEAppDelegate.m */,
+				D9DA0A461C3CC8AB00191DD3 /* Main.storyboard */,
 				3F97567D18E0BC0F0046C09B /* First Controller */,
 				3F97568118E0CE190046C09B /* Second Controller */,
 				3F97567318E087CE0046C09B /* View Controller Cache */,
@@ -291,8 +294,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F97568318E0CE4E0046C09B /* DESecondController.xib in Resources */,
-				3F97567C18E0BBC20046C09B /* DEFirstController.xib in Resources */,
+				D9DA0A481C3CCB7B00191DD3 /* DEFirstController.xib in Resources */,
+				D9DA0A491C3CCB7B00191DD3 /* DESecondController.xib in Resources */,
+				D9DA0A471C3CC8AB00191DD3 /* Main.storyboard in Resources */,
 				3F97564C18E087530046C09B /* InfoPlist.strings in Resources */,
 				3F97565418E087530046C09B /* Images.xcassets in Resources */,
 			);

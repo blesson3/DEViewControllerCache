@@ -32,6 +32,8 @@
 // calls +controllerWithNibName: with the string representation of the class name
 +(instancetype) controller;
 
++(instancetype) controllerWithStoryboardName:(NSString*)storyboardName storyboardIdentifer:(NSString*)storyboardIdentifer;
+
 // calls +controllerWithNibName:nibBundle: with nil as the second param
 +(instancetype) controllerWithNibName:(NSString *)nibName;
 

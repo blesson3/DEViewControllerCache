@@ -40,7 +40,8 @@
 }
 
 -(IBAction)controller1Tapped:(id)sender {
-    DEFirstController *controller = [[DEViewControllerCache defaultCache] controllerForClass:[DEFirstController class]];
+//    DEFirstController *controller = [[DEViewControllerCache defaultCache] controllerForClass:[DEFirstController class]];
+    DESecondController *controller = [[DEViewControllerCache defaultCache] controllerForClass:[DEFirstController class] storyboardName:@"Main" storyboardIdentifier:@"first"];
     
     NSLog(@"%@", controller);
     
@@ -48,7 +49,8 @@
 }
 
 -(IBAction)controller2Tapped:(id)sender {
-    DESecondController *controller = [[DEViewControllerCache defaultCache] controllerForClass:[DESecondController class]];
+//    DESecondController *controller = [[DEViewControllerCache defaultCache] controllerForClass:[DESecondController class]];
+    DESecondController *controller = [[DEViewControllerCache defaultCache] controllerForClass:[DESecondController class] storyboardName:@"Main" storyboardIdentifier:@"second"];
     
     NSLog(@"%@", controller);
     
